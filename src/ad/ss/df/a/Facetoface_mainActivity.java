@@ -16,9 +16,12 @@ public class Facetoface_mainActivity extends Activity {
         tab = (TabHost) findViewById(R.id.tabhost);
         tab.setup();
         
+        tab.setCurrentTab(0);
+        
         TabHost.TabSpec spec1 = tab.newTabSpec("friends");
         TabHost.TabSpec spec2 = tab.newTabSpec("game friends");
         TabHost.TabSpec spec3 = tab.newTabSpec("invite");
+    
         
         spec1.setIndicator("friends");
         spec2.setIndicator("game firends");
@@ -30,7 +33,7 @@ public class Facetoface_mainActivity extends Activity {
         
         //=3=
         
-       // tab.addTab(spec1);
+        tab.addTab(spec1);
         tab.addTab(spec2);
         tab.addTab(spec3);
         

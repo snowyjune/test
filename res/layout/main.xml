@@ -38,74 +38,95 @@
     android:layout_weight="0.2"
     >
 		<LinearLayout 
-			android:layout_width="wrap_content"
+			android:layout_width="0dp"
 		    android:layout_height="fill_parent"
-		    android:orientation="vertical"	 
-		    
-		    android:background="#555555"   
+		    android:orientation="vertical"	
+		    android:background="#555555"  
+		    android:layout_weight="0.15" 
 		    >
 		    	<Button 
 		    	    android:id="@+id/Button_FacebookConn"
-		    	    android:layout_width="wrap_content"
+		    	    android:layout_width="fill_parent"
 		    	    android:layout_height="wrap_content"
-		    	    android:layout_weight="0.1"
+		    	    android:layout_weight="0.5"
 		    	    android:text="face"
 		    	    />
 		    	<Button 
 		    	    android:id="@+id/Button_TwittConn"
-		    	    android:layout_width="wrap_content"
+		    	    android:layout_width="fill_parent"
 		    	    android:layout_height="wrap_content"
-		    	   	android:layout_weight="0.1"
+		    	    android:layout_weight="0.5"
 		    	    android:text="twitt"		    	    
 		    	    />
 		</LinearLayout>
 		<LinearLayout
-		    android:layout_width="match_parent"
+		    android:layout_width="0dp"
 		    android:layout_height="fill_parent"
 		    android:orientation="vertical"
+		    android:layout_weight="0.85"
 		    >
-	        <TableLayout
+	        <LinearLayout
 	        	android:layout_width="match_parent"
 	    		android:layout_height="0dp"
 	    		android:orientation="horizontal"
 	    		android:layout_weight="0.14"
 	    		android:background="#aaaaaa"
 	    	    >
-	    	    <TableRow >
 					<ImageView
 					    android:layout_width="wrap_content"
-					    android:layout_height="wrap_content"
-					    android:layout_weight="0.2"
-					    android:background="#FFFFFF"
+					    android:layout_height="match_parent"
+					    android:layout_weight="0.3"
+					    android:background="#FFaaFF"
 					    android:src="@drawable/ic_launcher"
 					    />
 					<LinearLayout
 					    android:layout_width="wrap_content"
-					    android:layout_height="wrap_content"
+					    android:layout_height="fill_parent"
 					    android:layout_weight="0.4"
 					    android:orientation="vertical"
 					    android:gravity="center_vertical">
 						<TextView 
-						    android:layout_width="wrap_content"
+						    android:layout_width="match_parent"
 						    android:layout_height="wrap_content"
 						    android:text="Profile name"
+						    android:layout_weight="0.8"
 						    android:background="#987654"
 						    />
 						<TextView 
-						    android:layout_width="wrap_content"
+						    android:layout_width="match_parent"
 						    android:layout_height="wrap_content"
 						    android:text="grade"
+						    android:layout_weight="0.2"
 						    android:background="#ff397a"
 						    />
 					</LinearLayout>
-					<Button 
+					<LinearLayout
 					    android:layout_width="wrap_content"
-					    android:layout_height="wrap_content"
-					    android:layout_weight="0.4"
-					    android:text="Q"
-					    />
-	            </TableRow>
-			</TableLayout>
+					    android:layout_height="fill_parent"
+					    android:layout_weight="0.2"
+					    android:orientation="vertical"
+					    android:gravity="center_vertical">
+						
+					   		<Button 
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:layout_weight="0.8"
+							    android:text="Q"
+					  		  />
+							<TextView 
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_weight="0.2"				    
+					  		  />
+					</LinearLayout>
+					<LinearLayout
+					    android:layout_width="wrap_content"
+					    android:layout_height="fill_parent"
+					    android:layout_weight="0.3"
+					    android:orientation="vertical"
+					    android:gravity="center_vertical">
+					</LinearLayout>
+			</LinearLayout>
 	  		<TableLayout
 	        	android:layout_width="match_parent"
 	    		android:layout_height="0dp"
@@ -116,24 +137,26 @@
 	  		    <TableRow>
 	  		        <LinearLayout 
 	  		  		    android:layout_width="wrap_content"
-	  		            android:layout_height="wrap_content"	
-	  		            android:layout_weight="1"            
+	  		            android:layout_height="fill_parent"
+	  		            android:layout_weight="1"          
+	  		            android:gravity="center"  
 	  		            >
 	  		            <TextView 
 		  		            android:layout_width="wrap_content"
-		  		            android:layout_height="wrap_content"
+		  		            android:layout_height="match_parent"
 		  		            android:text="Gold"
 		  		        />
 		  		        <TextView 
 		  		            android:layout_width="wrap_content"
-		  		            android:layout_height="wrap_content"
+		  		            android:layout_height="match_parent"
 		  		            android:text="800"
 		  		        />
 	  		        </LinearLayout>
 	  		        <LinearLayout 
 	  		  		    android:layout_width="wrap_content"
-	  		            android:layout_height="wrap_content"	
-	  		            android:layout_weight="1"            
+	  		            android:layout_height="fill_parent"
+	  		            android:layout_weight="1"    
+	  		            android:gravity="center"          
 	  		            >
 	  		            <TextView 
 		  		            android:layout_width="wrap_content"
@@ -146,10 +169,11 @@
 		  		            android:text="44/89"
 		  		        />
 	  		        </LinearLayout>
-	  		        	  		        <LinearLayout 
+	  		        	<LinearLayout 
 	  		  		    android:layout_width="wrap_content"
-	  		            android:layout_height="wrap_content"	
-	  		            android:layout_weight="1"            
+	  		            android:layout_height="fill_parent"
+	  		            android:layout_weight="1"   
+	  		            android:gravity="center"           
 	  		            >
 	  		            <TextView 
 		  		            android:layout_width="wrap_content"
@@ -229,18 +253,19 @@
     	    android:id="@android:id/tabs"
     	    android:layout_width="fill_parent"
     	    android:layout_height="38dp"
-
-    	    ></TabWidget>    
+    	    android:layout_weight = "0.0475"
+    	 />  
         <FrameLayout 
             android:id="@android:id/tabcontent"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             >
-				<LinearLayout 
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/test"				    
-				    ></LinearLayout>     	    
+            <LinearLayout 
+                android:id="@+id/test"
+                android:layout_width="fill_parent"
+            	android:layout_height="fill_parent"
+            	android:layout_marginTop="10dp"            
+            ></LinearLayout>
         </FrameLayout>
     </TabHost>
 
