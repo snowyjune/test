@@ -2,30 +2,56 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/bg">
    
     <LinearLayout 
     android:id="@+id/Layout_Title"
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:orientation="vertical"    
-    android:background="#12aa88"  
+    android:background="@drawable/header"  
     android:layout_weight="0.09"
-	android:gravity="right"
     >    	
-		<Button 
-		    android:id="@+id/Button_Config"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:text="Config"
-		    />
+    	<LinearLayout 
+  	    		android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:orientation="horizontal"
+			    android:gravity="center_vertical"
+			    android:padding="10px"
+    	    	>
+	    	    <LinearLayout 
+	   	    		android:layout_width="0dp"
+				    android:layout_height="fill_parent"
+				    android:layout_weight="0.249" 	        
+	    	        ></LinearLayout>
+		    	<LinearLayout 
+		    		android:layout_width="0dp"
+				    android:layout_height="fill_parent"	
+				    android:background="@drawable/title"    
+				    android:layout_weight="0.516"
+				    android:layout_marginTop="2dp"
+				    android:layout_marginBottom="2dp"
+		    	    ></LinearLayout>
+		    	<LinearLayout 
+	   	    		android:layout_width="0dp"
+				    android:layout_height="fill_parent"
+				    android:layout_weight="0.1" 	        
+	    	        ></LinearLayout>
+				<Button 
+				    android:id="@+id/Button_Config"
+				    android:layout_width="0dp"
+				    android:layout_height="match_parent"
+				    android:background="@drawable/setting"
+				    android:layout_weight="0.145"
+				    />
+		</LinearLayout>
     </LinearLayout>
     
     <LinearLayout 
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:orientation="vertical"         
-    android:background="#3333aa"
     android:layout_weight="0.025"
     ></LinearLayout>
     
@@ -34,30 +60,81 @@
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:orientation="horizontal"         
-    android:background="#ff9988"
     android:layout_weight="0.2"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     >
 		<LinearLayout 
 			android:layout_width="0dp"
 		    android:layout_height="fill_parent"
 		    android:orientation="vertical"	
-		    android:background="#555555"  
+		    android:background="@drawable/profile_1"  
 		    android:layout_weight="0.15" 
+
 		    >
-		    	<Button 
-		    	    android:id="@+id/Button_FacebookConn"
-		    	    android:layout_width="fill_parent"
-		    	    android:layout_height="wrap_content"
-		    	    android:layout_weight="0.5"
-		    	    android:text="face"
+				<LinearLayout 
+				    android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="0.12"
+				    ></LinearLayout>
+				<LinearLayout 
+				   	android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="0.4"
+				    android:orientation="horizontal"
+				    >
+				    <LinearLayout
+				        android:layout_height="match_parent"
+				        android:layout_width="0dp"
+				        android:layout_weight="0.15"
+				        />
+				   	<Button 
+			    	    android:id="@+id/Button_FacebookConn"
+			    	    android:layout_width="0dp"
+			    	    android:layout_height="match_parent"
+			    	    android:background="@drawable/profile_f_off"
+			    	    android:layout_weight="0.8"
 		    	    />
-		    	<Button 
-		    	    android:id="@+id/Button_TwittConn"
-		    	    android:layout_width="fill_parent"
-		    	    android:layout_height="wrap_content"
-		    	    android:layout_weight="0.5"
-		    	    android:text="twitt"		    	    
+				   	<LinearLayout
+				        android:layout_height="match_parent"
+				        android:layout_width="0dp"
+				        android:layout_weight="0.1"
+				        />
+				</LinearLayout>
+		    	<LinearLayout 
+		    	    android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="0.12"
+		    	    ></LinearLayout>
+		    	<LinearLayout 
+				   	android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="0.4"
+				    android:orientation="horizontal"
+				    >
+				   	<LinearLayout
+				        android:layout_height="match_parent"
+				        android:layout_width="0dp"
+				        android:layout_weight="0.15"
+				        />
+				   	<Button 
+			    	    android:id="@+id/Button_TwittConn"
+			    	    android:layout_width="0dp"
+			    	    android:layout_height="match_parent"
+			    	    android:background="@drawable/profile_t_off"
+			    	    android:layout_weight="0.8"     
 		    	    />
+				   	<LinearLayout
+				        android:layout_height="match_parent"
+				        android:layout_width="0dp"
+				        android:layout_weight="0.1"
+				        />
+				   	</LinearLayout>
+		    	<LinearLayout 
+		    	     android:layout_width="match_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="0.1"
+		    	    ></LinearLayout>
 		</LinearLayout>
 		<LinearLayout
 		    android:layout_width="0dp"
@@ -69,70 +146,92 @@
 	        	android:layout_width="match_parent"
 	    		android:layout_height="0dp"
 	    		android:orientation="horizontal"
-	    		android:layout_weight="0.14"
-	    		android:background="#aaaaaa"
+	    		android:layout_weight="0.13"
+	    		android:background="@drawable/profile_2"
+	    		android:padding="7dp"
+	    		android:gravity="left"
 	    	    >
 					<ImageView
-					    android:layout_width="wrap_content"
+					    android:id="@+id/Image_ProfileImg"
+					    android:layout_width="0dp"
 					    android:layout_height="match_parent"
-					    android:layout_weight="0.3"
-					    android:background="#FFaaFF"
-					    android:src="@drawable/ic_launcher"
+					    android:layout_weight="0.20"
+					    android:background="@drawable/profile_round_corner"
+					    
 					    />
 					<LinearLayout
-					    android:layout_width="wrap_content"
+					    android:layout_width="0dp"
 					    android:layout_height="fill_parent"
 					    android:layout_weight="0.4"
 					    android:orientation="vertical"
+					    android:layout_marginLeft="5dp"
 					    android:gravity="center_vertical">
 						<TextView 
+						    android:id="@+id/Text_userName"
 						    android:layout_width="match_parent"
 						    android:layout_height="wrap_content"
 						    android:text="Profile name"
 						    android:layout_weight="0.8"
-						    android:background="#987654"
+						    android:textStyle="bold"
+						    android:textColor="#4488ee"
+						    android:gravity="center_vertical"
+						    android:singleLine="true"
+						    android:ellipsize="marquee"
 						    />
 						<TextView 
+						    android:id="@+id/Text_userGrade"
 						    android:layout_width="match_parent"
 						    android:layout_height="wrap_content"
-						    android:text="grade"
+						    android:text="Rookie"
 						    android:layout_weight="0.2"
-						    android:background="#ff397a"
+						    android:gravity="top"
+						    android:textColor="#777777"
 						    />
 					</LinearLayout>
 					<LinearLayout
-					    android:layout_width="wrap_content"
+					    android:layout_width="0dp"
 					    android:layout_height="fill_parent"
-					    android:layout_weight="0.2"
+					    android:layout_weight="0.13"
 					    android:orientation="vertical"
-					    android:gravity="center_vertical">
-						
-					   		<Button 
-								android:layout_width="fill_parent"
-								android:layout_height="wrap_content"
-								android:layout_weight="0.8"
-							    android:text="Q"
-					  		  />
+					    android:gravity="center_vertical"
+					    android:paddingLeft="2dp"
+					    android:paddingRight="2dp"
+					    android:paddingBottom="6dp"
+						>
 							<TextView 
+							    android:id="@+id/Text_itemTime"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:layout_weight="0.2"				    
+								android:layout_weight="0.5"			
+								android:background="@drawable/item_time"	   
+								android:text="24h" 
+								android:textColor="#777777"
+								android:gravity="center"
 					  		  />
+							<Button 
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_weight="0.5"
+							    android:background="@drawable/itembox"
+							    android:layout_marginLeft="1dp"
+							    android:layout_marginRight="1dp"
+					  		  />
+
 					</LinearLayout>
-					<LinearLayout
-					    android:layout_width="wrap_content"
+					<LinearLayout 
+					    android:layout_width="0dp"
 					    android:layout_height="fill_parent"
-					    android:layout_weight="0.3"
-					    android:orientation="vertical"
-					    android:gravity="center_vertical">
-					</LinearLayout>
+					    android:layout_weight="0.085"
+					    ></LinearLayout>
 			</LinearLayout>
 	  		<TableLayout
 	        	android:layout_width="match_parent"
 	    		android:layout_height="0dp"
 	    		android:orientation="vertical"  
 	    		android:layout_weight="0.06"    		
-	    		android:background="#a88aaa"		    
+	    		android:background="@drawable/profile_3"	
+	    		android:gravity="center_vertical"	
+	    		android:paddingBottom="5dp"    
 	  		    >
 	  		    <TableRow>
 	  		        <LinearLayout 
@@ -141,15 +240,17 @@
 	  		            android:layout_weight="1"          
 	  		            android:gravity="center"  
 	  		            >
-	  		            <TextView 
+	  		            <ImageView
 		  		            android:layout_width="wrap_content"
 		  		            android:layout_height="match_parent"
-		  		            android:text="Gold"
+		  		            android:background="@drawable/coin"
 		  		        />
 		  		        <TextView 
 		  		            android:layout_width="wrap_content"
 		  		            android:layout_height="match_parent"
 		  		            android:text="800"
+
+		  		            android:textColor="#777777"
 		  		        />
 	  		        </LinearLayout>
 	  		        <LinearLayout 
@@ -158,15 +259,17 @@
 	  		            android:layout_weight="1"    
 	  		            android:gravity="center"          
 	  		            >
-	  		            <TextView 
+	  		            <ImageView
 		  		            android:layout_width="wrap_content"
 		  		            android:layout_height="wrap_content"
-		  		            android:text="W/L"
+		  		           	android:background="@drawable/point_c"
 		  		        />
 		  		        <TextView 
 		  		            android:layout_width="wrap_content"
 		  		            android:layout_height="wrap_content"
-		  		            android:text="44/89"
+		  		            android:text="300"
+
+		  		           	android:textColor="#777777"
 		  		        />
 	  		        </LinearLayout>
 	  		        	<LinearLayout 
@@ -175,15 +278,17 @@
 	  		            android:layout_weight="1"   
 	  		            android:gravity="center"           
 	  		            >
-	  		            <TextView 
+	  		            <ImageView
 		  		            android:layout_width="wrap_content"
 		  		            android:layout_height="wrap_content"
-		  		            android:text="Exp"
+		  		            android:background="@drawable/point_g"
 		  		        />
 		  		        <TextView 
 		  		            android:layout_width="wrap_content"
 		  		            android:layout_height="wrap_content"
 		  		            android:text="200"
+
+		  		           	android:textColor="#777777"
 		  		        />
 	  		        </LinearLayout>
 	  		    </TableRow>
@@ -195,7 +300,6 @@
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:orientation="horizontal"
-    android:background="#3333aa"
     android:layout_weight="0.025"
     > 
     </LinearLayout>
@@ -204,69 +308,100 @@
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:orientation="horizontal"         
-    android:background="#3399ff"
-    android:layout_weight="0.09125"
+    android:layout_weight="0.1"
     android:gravity="center"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     >
-        <Button 
-            android:id="@+id/Button_Rank"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:text="Rank"
-            android:layout_alignParentLeft="true"
-            />
-        <Button 
-            android:id="@+id/Button_Market"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:text="Market"
-            android:layout_alignParentRight="true"
-            />
-        <Button 
-            android:id="@+id/Button_QuickMatch"
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:text="Quick Match" 
-            android:layout_toLeftOf="@id/Button_Market"
-            android:layout_toRightOf="@id/Button_Rank"
-            
-             />
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:orientation="horizontal"
+		    >
+	        <Button 
+	            android:id="@+id/Button_Rank"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:background="@drawable/ranking"
+	            android:layout_marginRight="3dp"
+	            android:layout_weight="0.17"
+	            />
+	        <Button 
+	            android:id="@+id/Button_QuickMatch"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="0.66"     
+	            android:background="@drawable/match"
+	             />
+	        <Button 
+	            android:id="@+id/Button_Market"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:background="@drawable/store"
+	            android:layout_weight="0.17"
+	            android:layout_marginLeft="3dp"
+	            />
+        </LinearLayout>
    </RelativeLayout>
     
     <LinearLayout 
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:orientation="vertical"         
-    android:background="#3333aa"
-    android:layout_weight="0.025"
+    android:layout_weight="0.02"
     ></LinearLayout>
     
-    <TabHost
-    android:id="@+id/tabhost"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:orientation="vertical"         
-    android:background="#af2488"
-    android:layout_weight="0.54375"	
-    >
-    	<TabWidget 
-    	    android:id="@android:id/tabs"
-    	    android:layout_width="fill_parent"
-    	    android:layout_height="38dp"
-    	    android:layout_weight = "0.0475"
-    	 />  
-        <FrameLayout 
-            android:id="@android:id/tabcontent"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            >
-            <LinearLayout 
-                android:id="@+id/test"
-                android:layout_width="fill_parent"
-            	android:layout_height="fill_parent"
-            	android:layout_marginTop="10dp"            
-            ></LinearLayout>
-        </FrameLayout>
-    </TabHost>
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="0.54875"	>
+		
+	    <TabHost
+	    android:id="@+id/tabhost"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"       
+	   	android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    android:paddingTop="5dp"
+	    >
+	    	<TabWidget 
+	    	    android:id="@android:id/tabs"
+	    	    android:layout_width="match_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_weight = "0.0475"
+	    	>
+	  		</TabWidget>
+	        <FrameLayout 
+	            android:id="@android:id/tabcontent"
+	            android:layout_width="fill_parent"
+	            android:layout_height="match_parent" 
 
+	            >
+		  		<ListView 
+		  		    android:id="@+id/List_friendList"
+	                android:layout_width="fill_parent"
+	            	android:layout_height="fill_parent"  
+	            	android:background="#eeeeee"	
+		  		    ></ListView>
+	            <LinearLayout 
+	                android:id="@+id/test"
+	                android:layout_width="fill_parent"
+	            	android:layout_height="fill_parent"       
+	            	android:background="#eeeeee"
+	            ></LinearLayout>
+	        </FrameLayout>
+	    </TabHost>
+	    <TextView
+	        android:id="@+id/Image_inviteNum"
+	        android:layout_height="25dp"
+	        android:layout_width="25dp"
+	        android:layout_alignParentRight="true"
+	        android:background="@drawable/main_badge2"
+	        android:layout_marginRight="5dp"
+	        android:text="5"
+	        android:textColor="#ffffff"
+	        android:gravity="center"
+	        />
+	</RelativeLayout>
 </LinearLayout>
