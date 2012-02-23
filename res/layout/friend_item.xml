@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cell"
+    >
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:background="@drawable/cell"
+		>
+		    <ImageView 
+		        android:layout_width="50dp"
+		        android:layout_height="50dp"
+		        android:id="@+id/FriendPicImg"
+				android:layout_alignParentLeft="true"
+				android:layout_margin="10dp"
+				android:layout_centerVertical="true"
+				android:background="@drawable/roundcorner"
+		        />
+		    <ImageView
+		        android:layout_width="25dp"
+		        android:layout_height="25dp"   
+		        android:id="@+id/FriendStatus"       
+		        android:layout_alignParentRight="true" 
+		  		android:layout_margin="10dp"
+		  		android:layout_centerVertical="true"
+		  		
+				android:background="@drawable/main_light_grey"        
+		        />
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:text="720"
+		        android:layout_toLeftOf="@id/FriendStatus"
+		        android:layout_centerVertical="true"	      
+		        android:id="@+id/exp_g"  
+		        android:layout_marginRight="20dp"
+		      />
+		    <ImageView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:src="@drawable/point_g"
+		        android:layout_centerVertical="true"
+				android:layout_toLeftOf="@id/exp_g"
+				android:id="@+id/img_exp_g"  
+				android:layout_marginRight="5dp"
+		        />
+		    <TextView   
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:text="Friend Name" 
+		        android:id="@+id/FriendName"
+		        android:layout_toRightOf="@id/FriendPicImg"
+		        android:layout_toLeftOf="@id/img_exp_g"
+		       	android:layout_marginRight="10dp"
+		       	android:layout_marginTop="10dp"
+		       	android:layout_marginBottom="10dp"
+		    	android:textColor="#4499ee"
+		        android:layout_centerVertical="true"
+		        android:singleLine="true"
+				android:ellipsize="marquee"
+				android:textSize="7pt"
+				android:textStyle="bold"
+		        />
+		        
+		    </RelativeLayout>    
+		    
+</LinearLayout>
